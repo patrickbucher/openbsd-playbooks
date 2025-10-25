@@ -1,1 +1,5 @@
+numlockx
+setxkbmap -option compose:caps
+xsetroot -solid black
+slstatus &
 exec dwm

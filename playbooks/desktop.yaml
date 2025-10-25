@@ -26,7 +26,7 @@
       package:
         name: "{{ item }}"
       loop:
-        - fantasquesansmono-nerd-fonts
+        - fantasque-sans
     - name: Suckless Folder Created
       file:
         path: "/home/{{ user }}/suckless"
@@ -76,6 +76,8 @@
           dest: st-0.9.3/config.h
         - src: slstatus/config.mk
           dest: slstatus-1.1/config.mk
+        - src: slstatus/config.h
+          dest: slstatus-1.1/config.h
         - src: slock/config.mk
           dest: slock-1.6/config.mk
         - src: slock/config.h
