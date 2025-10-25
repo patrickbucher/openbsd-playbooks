@@ -1,0 +1,12 @@
+---
+- name: Basic System Setup
+  hosts: all
+  become: true
+  become_method: doas
+  tasks:
+    - name: Packages Installed
+      package:
+        name: "{{ item }}"
+      loop:
+        - git
+        - wget
