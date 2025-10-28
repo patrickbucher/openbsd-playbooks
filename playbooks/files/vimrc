@@ -1,0 +1,11 @@
+set enc=utf-8
+set tabstop=8
+set shiftwidth=8
+set autoindent
+
+set number
+filetype on
+syntax on
+colo habamax
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

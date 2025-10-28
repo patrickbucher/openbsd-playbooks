@@ -3,6 +3,8 @@
   hosts: all
   become: true
   become_method: doas
+  vars:
+    user: patrick
   tasks:
     - name: Packages Installed
       package:
@@ -10,3 +12,13 @@
       loop:
         - git
         - wget
+    - name: Dotfiles Copied
+      copy:
+        src: "{{ item.src }}"
+        dest: "/home/{{ user }}/{{ item.dest }}"
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: '0644'
+      loop:
+        - src: vimrc
+          dest: .vimrc
