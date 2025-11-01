@@ -1,0 +1,33 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+PS1='\u@\h:[\W]\$ '
+
+set -o vi
+HISTSIZE=-1
+HISTFILESIZE=-1
+
+alias pc='pass -c'
+
+export TERM='xterm-256color'
+
+# git
+alias gin='git init'
+alias gcl='git clone'
+alias gpl='git pull'
+alias gps='git push'
+alias gcm='git commit'
+alias gst='git status --short'
+alias gad='git add'
+alias grm='git rm'
+alias gco='git checkout'
+alias gbr='git branch'
+alias gdf='git diff'
+alias glg='git log'
+alias gmv='git mv'
+alias gbl='git blame'
+alias gmg='git merge'

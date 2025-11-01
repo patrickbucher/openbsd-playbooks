@@ -22,3 +22,5 @@
       loop:
         - src: vimrc
           dest: .vimrc
+        - src: bashrc
+          dest: .bashrc

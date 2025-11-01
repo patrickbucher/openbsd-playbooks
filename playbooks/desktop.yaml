@@ -27,6 +27,7 @@
         name: "{{ item }}"
       loop:
         - fantasque-sans
+        - alacritty
     - name: Suckless Folder Created
       file:
         path: "/home/{{ user }}/suckless"
@@ -92,6 +93,13 @@
       copy:
         src: xsession
         dest: "/home/{{ user }}/.xsession"
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: '0644'
+    - name: Alacritty Config File
+      copy:
+        src: alacritty.toml
+        dest: "/home/{{ user }}/.alacritty.toml"
         owner: "{{ user }}"
         group: "{{ user }}"
         mode: '0644'
