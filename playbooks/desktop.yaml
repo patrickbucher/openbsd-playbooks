@@ -28,6 +28,7 @@
       loop:
         - fantasque-sans
         - alacritty
+        - numlockx
     - name: Suckless Folder Created
       file:
         path: "/home/{{ user }}/suckless"

@@ -24,3 +24,5 @@
           dest: .vimrc
         - src: bashrc
           dest: .bashrc
+        - src: inputrc
+          dest: .inputrc
