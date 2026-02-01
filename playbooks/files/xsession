@@ -1,3 +1,4 @@
+. ~/.profile
 numlockx
 setxkbmap -option compose:caps
 xsetroot -solid black
