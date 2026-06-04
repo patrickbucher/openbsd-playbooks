@@ -8,7 +8,7 @@
     suckless:
       - name: dwm
         version: 6.8
-        url: https://dl.suckless.org/dwm/dwm-6.6.tar.gz
+        url: https://dl.suckless.org/dwm/dwm-6.8.tar.gz
       - name: dmenu
         url: https://dl.suckless.org/tools/dmenu-5.4.tar.gz
         version: 5.4
@@ -67,9 +67,9 @@
         mode: '0644'
       loop:
         - src: dwm/config.mk
-          dest: dwm-6.6/config.mk
+          dest: dwm-6.8/config.mk
         - src: dwm/config.h
-          dest: dwm-6.6/config.h
+          dest: dwm-6.8/config.h
         - src: dmenu/config.mk
           dest: dmenu-5.4/config.mk
         - src: st/config.mk
