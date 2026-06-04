@@ -7,7 +7,7 @@
     user: patrick
     suckless:
       - name: dwm
-        version: 6.6
+        version: 6.8
         url: https://dl.suckless.org/dwm/dwm-6.6.tar.gz
       - name: dmenu
         url: https://dl.suckless.org/tools/dmenu-5.4.tar.gz
@@ -104,3 +104,11 @@
         owner: "{{ user }}"
         group: "{{ user }}"
         mode: '0644'
+    - name: switchkb script
+      copy:
+        src: switchkb
+        dest: "/usr/local/bin/switchkb"
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: '0755'
+

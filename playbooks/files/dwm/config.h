@@ -61,6 +61,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *upvol[] = { "sndioctl", "output.level=+0.05", NULL };
 static const char *downvol[] = { "sndioctl", "output.level=-0.05", NULL };
 static const char *mute[] = { "sndioctl", "output.mute=!", NULL };
+static const char *switchkb[] = { "switchkb", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,10 +96,11 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,		quit,          {0} },
-	{ 0,							0xffbf,     spawn,         {.v = downvol} },
-	{ 0,							0xffc0,     spawn,         {.v = upvol} },
-	{ 0,							0xffbe,     spawn,         {.v = mute} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,          {0} },
+	{ 0,				0xffbf,    spawn,         {.v = downvol} },
+	{ 0,				0xffc0,    spawn,         {.v = upvol} },
+	{ 0,				0xffbe,    spawn,         {.v = mute} },
+	{ MODKEY ,			XK_Tab,    spawn,         {.v = switchkb} },
 };
 
 /* button definitions */
